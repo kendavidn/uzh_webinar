@@ -56,3 +56,7 @@ img { border: 1px solid #e4e7eb; border-radius: 6px; }
 .callout { border-radius: 6px; }
 
 blockquote { font-size: 0.92rem; color: #3e4c59; border-left: 3px solid #d9e2ec; padding-left: 1rem; }
+
+/* Always show the copy button on code blocks (not just on hover) */
+.code-copy-button { opacity: 1 !important; color: #0b6e99 !important; }
+.code-copy-button > .bi::before { font-size: 1.1rem; }

@@ -1,7 +1,6 @@
 ---
 title: "Reproduce a Figure with AI"
-subtitle: "UZH webinar · breakout exercise"
-author: "Kene David Nwosu, UNIGE"
+subtitle: "UZH webinar · Small-group exercise"
 format:
   html:
     theme: [cosmo, style.scss]
@@ -9,7 +8,12 @@ format:
     code-copy: true
 ---
 
-In this breakout exercise, you will use an AI agent to reproduce a published figure from a paper using the raw data, and then explore ways to improve or redesign it. This will give you practice in guiding an AI agent from raw data to a reproducible visualization, and in auditing AI-generated code and figures.
+In this small-group exercise, you will prompt an AI agent to reproduce a published figure from the raw data, and then explore ways to improve or redesign it.
+
+Overall learning objectives: 
+
+- Practice guiding an AI agent from raw data to a reproducible visualization
+- Practice auditing AI-generated code and figures
 
 The data come from a COVID-19 antibody survey conducted in Yaoundé, Cameroon, in late 2020. The survey estimated how many people in the area had been infected with COVID-19 by testing for IgG and IgM antibodies. IgG antibodies indicate past infection, while IgM antibodies indicate recent infection.
 
@@ -23,7 +27,7 @@ Take a look at the three panels in the Figure below (a, the Euler diagram; b, th
 
 Then as a group, decide which of the three you would like to reproduce. Your group should pick one you understand well enough to interpret and check. 
 
-You will work individually on reproducing the same panel, but then share your final figure and prompting experiences with the group.
+Everyone in the group will work on the same panel, but you should all work individually. You will share your results with each otherat the end of the exercise.
 
 ::: {.figure-box}
 ::: {.figure-box-title}
@@ -59,12 +63,12 @@ Now you will open your AI agent to work on the task.
 ## Which agent to use
 
 - **Use a frontier paid model.** Freely provided models will likely stumble on this task. Your university-provided Copilot will also probably fail. We recommend a paid account on ChatGPT, Claude, Gemini, or Cursor. If you do not have a paid account on any of these, please let an instructor know, and they will grant you access to ChatGPT Plus.
-- **Browser or local agent?** For this quick demo, it may be easiest to work in the browser with ChatGPT, Claude, or Gemini. If you are already familiar with a local coding agent such as Claude Code, Codex, or Cursor, you can work locally instead. We will talk about local agents in the main room.
+- **Browser recommended.** For this exercise, it is easiest to work in the browser with ChatGPT, Claude, or Gemini. If you already use a coding agent that runs on your own computer (such as Claude Code, Codex, or Cursor), you can use that instead. We will talk about these local agents in the main room.
 :::
 
-Once you have selected an agent, build your prompt. Send something like the one below, with the caption for your chosen panel pasted in.
+Once you have selected an agent, copy the suggested prompt template below and paste in the caption for your chosen figure panel (a, b, or c).
 
-```text
+```markdown
 Using the attached data, create the figure described in the caption below.
 
 Succinctly list any data cleaning or other judgment decisions you made.
@@ -76,16 +80,24 @@ Do not look up the paper to find relevant code or context.
 [PASTE THE CAPTION FOR YOUR CHOSEN PANEL HERE]
 ```
 
+::: callout-tip
+## Why such a short prompt?
 
-::: callout-important
-## Do not upload the published figure
+We keep the prompt short so it is quick to read and adapt during the exercise. It also lets you see which judgment calls the model makes on its own when you don't spell out exactly what you want. Some of those calls will differ from what the original analysts did.
 
-The goal is to simulate the workflow of the original analyst: you have the raw data and an idea of the figure you want to produce, but the figure does not exist yet.
+In your own research, you will likely want to give the model as much context as you can, such as the data dictionary, the study protocol, or the relevant parts of a paper. The more context it has, the fewer guesses it has to make.
 :::
 
 Once you have a first draft, compare it against the published panel. Note the differences, and use follow-up prompts to get closer to the published panel. Focus on matching the underlying numbers and structure; exact colours and styling are not too important and do not need to match.
 
-In some cases, it may be helpful to provide relevant details from the Methods section of [the paper](https://www.nature.com/articles/s41467-021-25946-0){target="_blank"}.
+It may be helpful to provide relevant details from the Methods section of [the paper](https://www.nature.com/articles/s41467-021-25946-0){target="_blank"}.
+
+
+::: callout-important
+## Do not upload the published figure
+
+The goal is to simulate the workflow of the original analyst, wherein you have the raw data and an idea of the figure you want to produce, but the figure does not exist yet.
+:::
 
 ### 4. Improve or redesign the visualization
 
