@@ -1,0 +1,58 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$font-family-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+$body-color: #1f2933;
+$headings-color: #102a43;
+$link-color: #0b6e99;
+$primary: #0b6e99;
+$code-color: #8a3b12;
+$code-block-bg: #f5f7fa;
+$font-size-root: 17px;
+$line-height-base: 1.65;
+
+/*-- scss:rules --*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap");
+
+h1.title { font-weight: 700; letter-spacing: -0.02em; }
+.subtitle { color: #52606d; font-weight: 400; }
+h2 { font-weight: 700; letter-spacing: -0.01em; margin-top: 2.6rem; padding-bottom: 0.3rem; border-bottom: 1px solid #e4e7eb; }
+h3 { font-weight: 600; margin-top: 1.8rem; }
+
+div.sourceCode, pre { border: 1px solid #e4e7eb; border-radius: 6px; }
+pre code { white-space: pre-wrap; }
+
+img { border: 1px solid #e4e7eb; border-radius: 6px; }
+
+.figure-box {
+  border: 1px solid #e4e7eb;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 0.2rem 1.25rem 0.9rem;
+  margin: 1.2rem 0 1.6rem;
+
+  .figure-box-title {
+    font-weight: 700;
+    color: #102a43;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+    margin: 0.9rem 0 0.55rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid #e4e7eb;
+
+    p { margin: 0; }
+  }
+
+  img { border: none; border-radius: 4px; margin: 0.4rem 0 0.9rem; }
+
+  .figure-box-caption {
+    font-size: 0.92rem;
+    color: #3e4c59;
+    line-height: 1.55;
+  }
+
+  .figure-box-caption p { margin-bottom: 0.15rem; }
+}
+
+.callout { border-radius: 6px; }
+
+blockquote { font-size: 0.92rem; color: #3e4c59; border-left: 3px solid #d9e2ec; padding-left: 1rem; }

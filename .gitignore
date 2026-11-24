@@ -1,2 +1,5 @@
 /private/
 .DS_Store
+.posit/
+~$*
+index_files/
